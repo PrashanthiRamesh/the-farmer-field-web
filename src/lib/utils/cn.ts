@@ -11,7 +11,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 export const getTailwindColor = (colorName: string): string | undefined => {
   const [prefix, colorKey] = colorName.split(':');
-  const colors = fullConfig.theme?.colors as Record<string, any>;
+  const colors = fullConfig.theme?.colors as unknown as Record<string, Record<string, string>>;
   if (colors && prefix && colorKey) {
       const colorGroup = colors[prefix];
       if (colorGroup && typeof colorGroup === 'object') {
