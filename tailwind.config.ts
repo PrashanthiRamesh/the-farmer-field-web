@@ -70,6 +70,9 @@ export default {
           900: '#f6ede3',
         },
       },
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+      },
     },
   },
   plugins: [],
