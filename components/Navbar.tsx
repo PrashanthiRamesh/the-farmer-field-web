@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils';
 import React, { useState } from 'react'
-import { HoveredLink, Menu, MenuItem, ProductItem } from '@/components/ui/navbar-menu';
+import { HoveredLink, Menu } from '@/components/ui/navbar-menu';
 
 function Navbar({ className }: { className?: string }) {
-    const [active, setActive] = useState<string | null>(null);
+    const [, setActive] = useState<string | null>(null);
     return (
         <div
             className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
@@ -53,9 +53,9 @@ function Navbar({ className }: { className?: string }) {
               <HoveredLink href="/enterprise">Enterprise</HoveredLink>
             </div>
           </MenuItem> */}
-                <HoveredLink href="#products" item="Products">Products</HoveredLink>
-                <HoveredLink href="#team" item="Team">Team</HoveredLink>
-                <HoveredLink href="#contact" item="Contact">Contact</HoveredLink>
+                <HoveredLink href="#products">Products</HoveredLink>
+                <HoveredLink href="#team">Team</HoveredLink>
+                <HoveredLink href="#contact">Contact</HoveredLink>
             </Menu>
         </div>
     );

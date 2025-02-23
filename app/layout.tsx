@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} antialiased`}
+        className={`${playfairDisplay.variable} antialiased bg-seasalt-400`}
       >
         {children}
       </body>

@@ -7,6 +7,7 @@ import { FlipWords } from '@/components/ui/flip-words';
 import Navbar from '@/components/Navbar';
 import { Products } from '@/components/Products';
 import { Team } from '@/components/Team';
+import Image from 'next/image';
 
 const Intro = () => {
     const VISION_KEYWORDS = [
@@ -35,7 +36,7 @@ const Intro = () => {
     return (
         <div>
             <Navbar className="top-2" />
-            <div>
+            <div className="bg-seasalt-400">
                 <LampContainer>
                     <motion.div
                         initial={{ opacity: 0.5, y: 100 }}
@@ -48,7 +49,7 @@ const Intro = () => {
                         className="flex flex-col items-center justify-center gap-20"
                     >
                         <div className="mt-8 bg-gradient-to-br from-cal_poly_green-600 to-cal_poly_green-500 py-4 bg-clip-text text-center font-medium tracking-tight text-transparent flex items-center md:text-7xl gap-4">
-                            <img className="col-span-2 w-32 object-contain lg:col-span-1" src="/logo.png" alt="The Farmer Field Logo" />
+                            <Image className="col-span-2 w-32 object-contain lg:col-span-1" src="/logo.png" alt="The Farmer Field Logo" width="128" height="128" />
                             <div className="flex flex-col items-center gap-2">
                                 <div className="text-3xl md:text-6xl">The Farmer Field</div>
                                 <div className="text-xl md:text-3xl">Our farms to your home</div>
