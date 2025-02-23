@@ -72,6 +72,7 @@ export default {
       },
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
+        lora: ['Lora', 'serif'],
       },
     },
   },
