@@ -5,7 +5,8 @@ import { LampContainer } from '@/components/ui/lamp'
 import { motion } from "framer-motion";
 import { FlipWords } from '@/components/ui/flip-words';
 import Navbar from '@/components/Navbar';
-import { Products } from './Products';
+import { Products } from '@/components/Products';
+import { Team } from '@/components/Team';
 
 const Intro = () => {
     const VISION_KEYWORDS = [
@@ -44,7 +45,7 @@ const Intro = () => {
                             duration: 0.8,
                             ease: "easeInOut",
                         }}
-                        className="flex flex-col items-center justify-center gap-40"
+                        className="flex flex-col items-center justify-center gap-20"
                     >
                         <div className="mt-8 bg-gradient-to-br from-cal_poly_green-600 to-cal_poly_green-500 py-4 bg-clip-text text-center font-medium tracking-tight text-transparent flex items-center md:text-7xl gap-4">
                             <img className="col-span-2 w-32 object-contain lg:col-span-1" src="/logo.png" alt="The Farmer Field Logo" />
@@ -69,6 +70,7 @@ const Intro = () => {
                     </motion.div>
                 </LampContainer>
                 <Products />
+                <Team />
             </div>
         </div>
     )
