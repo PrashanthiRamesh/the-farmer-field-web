@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.font-lora {
-  font-family: 'Lora', serif;
-}
-
-.font-mulish {
-  font-family: 'Mulish', sans-serif;
-}
-
-.font-work-sans {
-  font-family: 'Work Sans', sans-serif;
-}
 
 @layer base {
   :root {
@@ -73,11 +60,7 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground font-primary;
+    @apply font-primary bg-primary text-white leading-loose;
   }
 }

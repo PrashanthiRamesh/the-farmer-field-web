@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, JetBrains_Mono, Lora } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -13,10 +15,11 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  title: "The Farmer Field",
-  description: "Our farms to your home",
-};
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
 
 export default function RootLayout({
   children,
@@ -25,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.variable}>
+      <body className={`${playfairDisplay.variable} ${lora.variable}`}> {/* TODO: Replace here for global font */}
+        <Header />
         {children}
       </body>
     </html>
