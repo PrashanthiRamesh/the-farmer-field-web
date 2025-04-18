@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Playfair_Display, JetBrains_Mono, Lora } from "next/font/google";
+import { Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -9,11 +8,11 @@ const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
+// const jetBrainsMono ({
+//   variable: "--font-jetbrains-mono",
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+// });
 
 const lora = Lora({
   variable: "--font-lora",
