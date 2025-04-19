@@ -1,6 +1,7 @@
 import { Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -29,7 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playfairDisplay.variable} ${lora.variable}`}> {/* TODO: Replace here for global font */}
         <Header />
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
