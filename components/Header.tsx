@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import React from 'react'
 import Nav from './Nav'
+import MobileNav from './MobileNav'
 
 const Header = () => {
     return (
@@ -18,13 +19,15 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav />
                     <Link href="/subscribe">
-                        <Button>Subscribe</Button>
+                        <Button className="bg-accent text-primary hover:bg-accent-hover hover:text-white transition-all">
+                            Subscribe
+                        </Button>
                     </Link>
                 </div>
 
                 {/* Mobile Navigation */}
                 <div className="xl:hidden">
-                    mobile nav
+                    <MobileNav />
                 </div>
             </div>
         </header>
