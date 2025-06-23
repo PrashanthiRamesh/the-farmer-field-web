@@ -1,39 +1,20 @@
-import { Playfair_Display, Lora } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
+import type { Metadata } from 'next'
+import './globals.css'
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-// const jetBrainsMono ({
-//   variable: "--font-jetbrains-mono",
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-// });
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-})
+export const metadata: Metadata = {
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.dev',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} ${lora.variable}`}> {/* TODO: Replace here for global font */}
-        <Header />
-        <StairTransition /> {/* Can be removed- to be validated */}
-        <PageTransition>{children}</PageTransition>
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
