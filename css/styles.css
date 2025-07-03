@@ -3140,6 +3140,7 @@ img.u-pull-left {
     margin-bottom: var(--vspace-0_5);
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .s-intro .counter__time .logo {
