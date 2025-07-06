@@ -2777,6 +2777,7 @@ img.u-pull-left {
     position: absolute;
     top: 50%;
     left: var(--gutter);
+    display: none;
 }
 
 .s-header__logo a {
@@ -3335,6 +3336,20 @@ img.u-pull-left {
 @media screen and (max-width: 1400px) {
     .s-intro .counter__time {
         font-size: 12.4rem;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .s-intro .counter__time {
+        font-size: 10.2rem;
+    }
+
+    .s-intro .counter__time .logo {
+        display: none;
+    }
+
+    .s-header__logo {
+        display: flex;
     }
 }
 
