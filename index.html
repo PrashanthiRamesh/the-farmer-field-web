@@ -147,18 +147,416 @@
 
         <section id="info" class="s-info">
             <div class="flex items-center justify-center px-6 py-12 bg-white">
-                <div class="max-w-2xl text-center animate-fade-in">
-                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed tracking-wide">
-                        <span class="block font-semibold text-gray-900 text-2xl mb-4">Bridge the gap between sustainable
-                            farms and your home.</span>
-                        Deliver fresh, responsibly grown produce directly from our fields to your table, supporting
-                        local communities and promoting a healthier lifestyle.
+                <div class="max-w-2xl text-center animate-fade-in s-content">
+                    <h4>Mission</h4>
+                    <p class="text-xl text-gray-700 leading-relaxed tracking-wide ">
+                        <span class="block font-semibold text-gray-900 text-2xl mb-4">
+                            Deliver fresh, responsibly grown produce directly from our fields to your table, supporting
+                            local communities and promoting a healthier lifestyle.</span>
                     </p>
                 </div>
             </div>
         </section>
 
+        <!--  -->
+
         <!-- end s-info -->
+
+        <!-- # produce
+        ================================================== -->
+
+        <section id="info" class="s-info">
+            <div class="flex items-center justify-center px-6 py-12 bg-white">
+                <div class="max-w-2xl text-center animate-fade-in s-content">
+                    <h4>Our hydroponics lab's produce</h4>
+                    <p class="text-xl text-gray-700 leading-relaxed tracking-wide ">
+                        <span class="block font-semibold text-gray-900 text-2xl mb-4">
+                        </span>
+                    </p>
+                </div>
+                <section id="produce" class="s-produce">
+                    <div class="produce-container">
+                        <div class="produce-grid">
+                            <!-- Example Card 1 -->
+                            <div class="produce-card" tabindex="0" onclick="openProduceDialog('Lettuce')"
+                                aria-label="View Lettuce details">
+                                <img src="images/produce/lettuce.jpg" alt="Lettuce" class="produce-img" />
+                                <div class="produce-name">Lettuce</div>
+                            </div>
+                            <!-- Example Card 2 -->
+                            <div class="produce-card" tabindex="0" onclick="openProduceDialog('Basil')"
+                                aria-label="View Basil details">
+                                <img src="images/produce/basil.jpg" alt="Basil" class="produce-img" />
+                                <div class="produce-name">Basil</div>
+                            </div>
+                            <!-- Example Card 3 -->
+                            <div class="produce-card" tabindex="0" onclick="openProduceDialog('Cherry Tomatoes')"
+                                aria-label="View Cherry Tomatoes details">
+                                <img src="images/produce/tomatoes.jpg" alt="Cherry Tomatoes" class="produce-img" />
+                                <div class="produce-name">Cherry Tomatoes</div>
+                            </div>
+                            <!-- Add more cards as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Dialog Modal -->
+                    <div id="produce-dialog" class="produce-dialog" tabindex="-1" aria-modal="true" role="dialog"
+                        style="display:none;">
+                        <div class="produce-dialog-content">
+                            <button class="produce-dialog-close" onclick="closeProduceDialog()"
+                                aria-label="Close">&times;</button>
+                            <h3 id="produce-dialog-title"></h3>
+                            <p id="produce-dialog-desc"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <style>
+                    /* Minimalistic, responsive, modern produce cards */
+                    .s-produce {
+                        background: #f8fafc;
+                        padding: 4rem 0 3rem 0;
+                    }
+
+                    .produce-container {
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        padding: 0 1.5rem;
+                    }
+
+                    .produce-title {
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: #2d6a4f;
+                        margin-bottom: 2.5rem;
+                        letter-spacing: -1px;
+                    }
+
+                    .produce-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                        gap: 2rem;
+                    }
+
+                    .produce-card {
+                        background: #fff;
+                        border-radius: 1.2rem;
+                        box-shadow: 0 2px 16px 0 rgba(60, 72, 88, 0.08);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: box-shadow 0.18s, transform 0.18s;
+                        padding: 1.5rem 1rem 1.2rem 1rem;
+                        outline: none;
+                        border: none;
+                        min-height: 270px;
+                    }
+
+                    .produce-card:focus,
+                    .produce-card:hover {
+                        box-shadow: 0 8px 32px 0 rgba(60, 72, 88, 0.14);
+                        transform: translateY(-4px) scale(1.03);
+                    }
+
+                    .produce-img {
+                        width: 90px;
+                        height: 90px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        margin-bottom: 1.2rem;
+                        background: #e6f4ea;
+                        box-shadow: 0 1px 4px 0 rgba(60, 72, 88, 0.06);
+                    }
+
+                    .produce-name {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        color: #222;
+                        margin-top: 0.5rem;
+                        letter-spacing: 0.2px;
+                    }
+
+                    /* Dialog styles */
+                    .produce-dialog {
+                        position: fixed;
+                        z-index: 1000;
+                        inset: 0;
+                        background: rgba(30, 41, 59, 0.18);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: fadeIn 0.2s;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                        }
+
+                        to {
+                            opacity: 1;
+                        }
+                    }
+
+                    .produce-dialog-content {
+                        background: #fff;
+                        border-radius: 1.2rem;
+                        box-shadow: 0 8px 32px 0 rgba(60, 72, 88, 0.18);
+                        padding: 2rem 1.5rem 1.5rem 1.5rem;
+                        max-width: 350px;
+                        width: 90vw;
+                        text-align: center;
+                        position: relative;
+                        animation: dialogPop 0.22s cubic-bezier(.4, 2, .6, 1);
+                    }
+
+                    @keyframes dialogPop {
+                        from {
+                            transform: scale(0.92);
+                            opacity: 0;
+                        }
+
+                        to {
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                    }
+
+                    .produce-dialog-close {
+                        position: absolute;
+                        top: 1rem;
+                        right: 1.2rem;
+                        background: none;
+                        border: none;
+                        font-size: 2rem;
+                        color: #888;
+                        cursor: pointer;
+                        transition: color 0.15s;
+                    }
+
+                    .produce-dialog-close:hover {
+                        color: #2d6a4f;
+                    }
+
+                    @media (max-width: 600px) {
+                        .produce-title {
+                            font-size: 1.3rem;
+                        }
+
+                        .produce-card {
+                            padding: 1rem 0.5rem;
+                            min-height: 180px;
+                        }
+
+                        .produce-img {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .produce-dialog-content {
+                            padding: 1.2rem 0.7rem;
+                        }
+                    }
+                </style>
+                <script>
+                    // Example produce data
+                    const produceDetails = {
+                        "Lettuce": {
+                            desc: "Crisp, fresh hydroponic lettuce grown without soil. Packed with nutrients and perfect for salads and sandwiches."
+                        },
+                        "Basil": {
+                            desc: "Aromatic basil leaves, ideal for pesto, salads, and garnishing. Grown in a controlled hydroponic environment."
+                        },
+                        "Cherry Tomatoes": {
+                            desc: "Sweet, juicy cherry tomatoes, ripened on the vine for maximum flavor and freshness."
+                        }
+                        // Add more produce items here as needed
+                    };
+
+                    function openProduceDialog(name) {
+                        document.getElementById('produce-dialog-title').textContent = name;
+                        document.getElementById('produce-dialog-desc').textContent = produceDetails[name]?.desc || '';
+                        document.getElementById('produce-dialog').style.display = 'flex';
+                        document.getElementById('produce-dialog').focus();
+                        document.body.style.overflow = 'hidden';
+                    }
+                    function closeProduceDialog() {
+                        document.getElementById('produce-dialog').style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                    // Optional: Close dialog on background click or ESC
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === "Escape") closeProduceDialog();
+                    });
+                    document.getElementById('produce-dialog').addEventListener('click', function (e) {
+                        if (e.target === this) closeProduceDialog();
+                    });
+                </script>
+            </div>
+        </section>
+
+        <!--  -->
+
+        <!-- end s-info -->
+
+        <!-- # order
+        ================================================== -->
+
+        <!-- <section id="order" class="s-order">
+            <div class="flex items-center justify-center px-6 py-12">
+                <div class="max-w-2xl text-center animate-fade-in s-content">
+                    <h4>Pre-order</h4>
+                    <p class="text-xl text-gray-700 leading-relaxed tracking-wide ">
+                        <span class="block font-semibold text-gray-900 text-2xl mb-4">
+                            Bridge the gap between sustainable
+                            farms and your home.</span>
+                    </p>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="order" class="s-order">
+            <div class="flex items-center justify-center px-6 py-12 bg-white">
+                <div class="order-form-container">
+                    <h4 class="order-title">Pre-order Fresh Produce</h4>
+                    <form class="order-form" autocomplete="off">
+                        <div class="order-form-row">
+                            <input type="text" name="name" class="order-input" placeholder="Full Name" required>
+                        </div>
+                        <div class="order-form-row">
+                            <input type="email" name="email" class="order-input" placeholder="Email Address" required>
+                        </div>
+                        <div class="order-form-row">
+                            <input type="tel" name="phone" class="order-input" placeholder="Phone Number" required>
+                        </div>
+                        <div class="order-form-row">
+                            <input type="text" name="address" class="order-input" placeholder="Delivery Address"
+                                required>
+                        </div>
+                        <div class="order-form-row">
+                            <select name="produce" class="order-input" required>
+                                <option value="" disabled selected>Select Produce</option>
+                                <option value="Lettuce">Lettuce</option>
+                                <option value="Basil">Basil</option>
+                                <option value="Cherry Tomatoes">Cherry Tomatoes</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="order-form-row">
+                            <input type="number" name="quantity" class="order-input" placeholder="Quantity (e.g. 2 kg)"
+                                min="1" required>
+                        </div>
+                        <div class="order-form-row">
+                            <button type="submit" class="order-btn">Pre-order Now</button>
+                        </div>
+                    </form>
+                    <div class="order-success" style="display:none;">
+                        <p>Thank you for your pre-order! We will contact you soon.</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .order-form-container {
+                    background: #f8fafc;
+                    border-radius: 1.5rem;
+                    box-shadow: 0 4px 24px 0 rgba(60, 72, 88, 0.08);
+                    padding: 2.5rem 2rem;
+                    max-width: 420px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .order-title {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #2d6a4f;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    letter-spacing: -0.5px;
+                }
+
+                .order-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.1rem;
+                }
+
+                .order-form-row {
+                    width: 100%;
+                }
+
+                .order-input {
+                    width: 100%;
+                    padding: 0.9rem 1rem;
+                    border: 1px solid #e0e7ef;
+                    border-radius: 0.8rem;
+                    font-size: 1rem;
+                    background: #fff;
+                    color: #222;
+                    outline: none;
+                    transition: border 0.18s;
+                }
+
+                .order-input:focus {
+                    border-color: #2d6a4f;
+                    background: #f4fef7;
+                }
+
+                .order-btn {
+                    width: 100%;
+                    padding: 1rem;
+                    background: #2d6a4f;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 0.8rem;
+                    cursor: pointer;
+                    transition: background 0.18s;
+                    letter-spacing: 0.5px;
+                }
+
+                .order-btn:hover,
+                .order-btn:focus {
+                    background: #40916c;
+                }
+
+                .order-success {
+                    margin-top: 1.5rem;
+                    text-align: center;
+                    color: #2d6a4f;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+
+                @media (max-width: 600px) {
+                    .order-form-container {
+                        padding: 1.2rem 0.5rem;
+                        border-radius: 1rem;
+                    }
+
+                    .order-title {
+                        font-size: 1.1rem;
+                    }
+
+                    .order-btn {
+                        font-size: 1rem;
+                    }
+                }
+            </style>
+            <script>
+                // Minimal JS for demo (no backend)
+                document.querySelector('.order-form').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    this.style.display = 'none';
+                    document.querySelector('.order-success').style.display = 'block';
+                });
+
+            </script>
+        </section>
+        <!-- end s-order -->
 
 
         <!-- # footer

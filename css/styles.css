@@ -3873,3 +3873,13 @@ img.u-pull-left {
         width: 4.8rem;
     }
 }
+
+.s-content {
+    margin: var(--vspace-1);
+    font-size: x-large;
+}
+
+.s-content h4 {
+    font-size: xx-large;
+    padding-bottom: 20px;
+}
