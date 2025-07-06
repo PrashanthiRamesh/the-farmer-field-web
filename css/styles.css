@@ -75,8 +75,52 @@
  * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+/** Larken font */
+
+@font-face {
+    font-family: 'Larken';
+    src: url('../fonts/Larken-Serif/Larken-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** Manifesto font */
+
+@font-face {
+    font-family: 'Manifesto';
+    src: url('../fonts/Manifesto/MANIFESTO.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** Evafiya font */
+
+@font-face {
+    font-family: 'Evafiya';
+    src: url('../fonts/Evafiya/Evafiya.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** Loki font */
+
+@font-face {
+    font-family: 'Loki';
+    src: url('../fonts/Loki/Loki-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
-    --font-1: "Inter", sans-serif;
+    --font-1: "Old Standard TT", sans-serif;
     /* monospace
     */
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
@@ -2777,7 +2821,7 @@ img.u-pull-left {
     position: absolute;
     top: 50%;
     left: var(--gutter);
-    display: none;
+    /* display: none; */
 }
 
 .s-header__logo a {
@@ -3102,7 +3146,7 @@ img.u-pull-left {
     font-weight: 300;
     color: rgba(255, 255, 255, 0.5);
     margin-top: var(--vspace-1);
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
 }
 
 .s-intro__content-title {
@@ -3112,7 +3156,7 @@ img.u-pull-left {
     color: white;
     margin-top: 0;
     margin-bottom: var(--vspace-0_25);
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
 }
 
 .s-intro__content-subtitle {
@@ -3127,7 +3171,7 @@ img.u-pull-left {
 .s-intro .counter {
     display: flex;
     flex-flow: row wrap;
-    font-family: 'Playfair Display';
+    /* font-family: 'Playfair Display'; */
 }
 
 .s-intro .counter__time {
@@ -3344,13 +3388,13 @@ img.u-pull-left {
         font-size: 10.2rem;
     }
 
-    .s-intro .counter__time .logo {
+    /* .s-intro .counter__time .logo {
         display: none;
     }
 
     .s-header__logo {
         display: flex;
-    }
+    } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -3426,8 +3470,8 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-info {
-    padding-top: var(--vspace-5);
-    padding-bottom: var(--vspace-4);
+    /* padding-top: var(--vspace-5); */
+    /* padding-bottom: var(--vspace-4); */
     width: 100%;
     position: relative;
 }
