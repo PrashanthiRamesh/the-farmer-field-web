@@ -2787,9 +2787,9 @@ img.u-pull-left {
  * pagewrap
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 400px) {
-    .s-pagewrap {
+    /* .s-pagewrap {
         --header-height: 10.6rem;
-    }
+    } */
 }
 
 
@@ -2878,10 +2878,10 @@ img.u-pull-left {
  * header
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-    .s-header {
+    /* .s-header {
         --logo-width: 8rem;
         top: var(--vspace-0_5);
-    }
+    } */
 
     .s-header__social {
         top: calc(50% - var(--vspace-0_25));
@@ -3153,7 +3153,7 @@ img.u-pull-left {
 }
 
 .s-intro__content-title {
-    font-size: var(--text-xxl);
+    font-size: 4.2rem;
     font-weight: 400;
     line-height: var(--vspace-1_5);
     color: white;
@@ -3184,10 +3184,7 @@ img.u-pull-left {
     font-size: 13.2rem;
     line-height: 1;
     color: white;
-    margin-right: var(--vspace-0_5);
-    /* margin-bottom: var(--vspace-0_5); */
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -3402,66 +3399,153 @@ img.u-pull-left {
 
 @media screen and (max-width: 1200px) {
     .s-intro .counter__time {
-        font-size: 11.2rem;
-    }
-
-    .s-intro__content-title {
-        font-size: var(--text-xl);
-        line-height: var(--vspace-1_25);
+        font-size: 10.2rem;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1022px) {
     .s-intro .counter__time {
-        font-size: 10.4rem;
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .s-intro .counter__time {
+        font-size: 9.2rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 911px) {
+    .s-intro .counter__time {
+        font-size: 8.2rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .s-intro .counter__time {
+        font-size: 7.4rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 741px) {
+    .s-intro .counter__time {
+        font-size: 6.4rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 647px) {
+    .s-intro .counter__time {
+        font-size: 5.8rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 2.6rem;
+    }
+
+    .s-header__logo img {
+        width: 14.6rem;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .s-intro__content {
-        padding-bottom: 8rem;
-    }
-
-    .s-intro .counter__time {
-        font-size: 9.6rem;
-    }
-
-    .s-intro__content-bottom {
-        max-width: 400px;
-    }
-
-    .s-intro__content-bottom br {
-        display: none;
-    }
-
-    .s-intro__content-title {
-        font-size: var(--text-lg);
-        line-height: var(--vspace-1);
+    .s-header__content {
+        margin: 0;
     }
 
     .s-intro__scroll {
         right: 4.8rem;
     }
-}
 
-@media screen and (max-width: 500px) {
     .s-intro .counter__time {
-        font-size: 7.2rem;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .s-intro .counter__time {
-        font-size: 6.6rem;
+        font-size: 5.6rem;
     }
 
     .s-intro__content-title {
-        font-size: var(--text-md);
-        line-height: var(--vspace-0_875);
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    .s-intro .counter__time {
+        font-size: 4.8rem;
     }
 
+    .s-intro__content-title {
+        font-size: 2rem;
+    }
+
+    .s-header__logo img {
+        width: 13.6rem;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .s-intro .counter__time {
+        font-size: 4.6rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 1.8rem;
+    }
+
+    .s-header__logo img {
+        width: 13.2rem;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .s-intro .counter__time {
+        font-size: 4.2rem;
+    }
+
+    .s-intro__content-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .s-intro .counter__time {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .s-intro .counter__time {
+        font-size: 3.8rem;
+    }
+}
+
+/* @media screen and (max-width: 400px) {
     .s-intro__scroll {
         right: 4rem;
+    }
+} */
+
+@media screen and (max-width: 374px) {
+    .s-intro .counter__time {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 354px) {
+    .s-intro .counter__time {
+        font-size: 3.4rem;
     }
 }
 
