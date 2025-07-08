@@ -3517,17 +3517,29 @@ img.u-pull-left {
     .s-intro__content-title {
         font-size: 1.6rem;
     }
+
+    .s-header__logo img {
+        width: 12.2rem;
+    }
 }
 
 @media screen and (max-width: 436px) {
     .s-intro .counter__time {
         font-size: 4rem;
     }
+
+    .s-header__logo img {
+        width: 11.2rem;
+    }
 }
 
 @media screen and (max-width: 417px) {
     .s-intro .counter__time {
         font-size: 3.8rem;
+    }
+
+    .s-header__logo img {
+        width: 10.2rem;
     }
 }
 
